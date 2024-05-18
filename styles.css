@@ -22,7 +22,7 @@ body{
 }
 .text-box{
     margin: auto;
-    width: 600px;
+    width: 40%;
     position: relative;
     top: 40%;
     transform: translate(0,-40%);
