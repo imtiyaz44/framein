@@ -4,43 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Framein - Inspiring Design</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/95a43eab56.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
         <div class="container">           
             <div class="banner1">
-                <img src="0x1.jpg" alt="a minimal office space">
+                <img src="media/0x1.webp" alt="a rustic living space">
                 <div class="text-box text-box-1">
-                    <p>INTERIOR DESIGN <br> YOU'LL LOVE</p>
+                    <p>DESIGN DREAMS <br> DELIVERED</p>
                 </div>               
             </div>
             <div class="banner2">
-                <img src="0x2.jpg" alt="a minimal office space">
+                <img src="media/0x2.webp" alt="a rustic living space">
                 <div class="text-box text-box-2">
-                    <p>MINIMALISM <br> AT IT'S BEST</p>
+                    <p>ELEVATE YOUR <br> EVERYDAY</p>
                 </div>               
             </div>
             <div class="banner3">
-                <img src="0x3.jpg" alt="a minimal office space">
+                <img src="media/0x3.webp" alt="a minimal bedroom">
                 <div class="text-box text-box-3">
-                    <p>AWE-INSPIRING <br> OFFICE DECOR</p>
+                    <p>STYLE, COMFORT, <br> HARMONY</p>
                 </div>               
             </div>
             <div class="banner4">
-                <img src="0x4.jpg" alt="a minimal office space">
+                <img src="media/0x4.webp" alt="a minimal living space">
                 <div class="text-box text-box-4">
-                    <p>MADE IN <br> BANGLADESH</p>
+                    <p>INSPIRED <br> LIVING SPACES</p>
                 </div>               
             </div>
             <nav>
                 <h1>FRAMEIN</h1>
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
                     <li><a href="#">PORTFOLIO</a></li>
                     <li><a href="#">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="overlay">
                 
@@ -48,5 +54,16 @@
             </div>
         </div>
     </div>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px"
+        }
+    </script>
 </body>
 </html>

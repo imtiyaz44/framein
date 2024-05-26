@@ -33,6 +33,7 @@ body{
 }
 .text-box p{
     font-size: 60px;
+    font-weight: 200;
     color:#fff;
     text-wrap: wrap;
 }
@@ -150,7 +151,7 @@ img{
     animation-delay: 12s;
 }
 .container nav{
-    color:#fff;
+    color: #080808;
     padding: 24px 10%;
     width: 100%;
     position: absolute;
@@ -158,11 +159,11 @@ img{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     ;
 }
 nav h1{
-    font-size: 36px;
+    font-size: 32px;
     position: relative;
 }
 nav ul li{
@@ -171,7 +172,7 @@ nav ul li{
     margin: 10px 20px;
 }
 nav ul li a{
-    color: #fff;
+    color: #080808;
     text-decoration: none;
     font-size: 20px;
     position: relative;
@@ -188,4 +189,44 @@ nav ul li a::after{
 }
 nav ul li a:hover::after{
     width: 100%;
+}
+
+/* ------------- css for small screens --------------*/
+nav .fa-solid{
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 900px){
+    nav .fa-solid{
+        display: block;
+        font-size: 24px;
+    }
+    nav ul{
+        background: rgb(255, 255, 255);
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .text-box{
+        width: 100%;
+    }
+    .text-box p{
+        font-size: 44px;
+    }
 }
