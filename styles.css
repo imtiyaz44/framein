@@ -222,7 +222,7 @@ nav .fa-solid{
         right: -200px;
         width: 200px;
         height: 100vh;
-        padding-top: 52px;
+        padding-top: 132px;
         z-index: 2;
         transition: right 0.5s;
     }
@@ -232,7 +232,7 @@ nav .fa-solid{
     }
     nav ul .fa-solid{
         position: absolute;
-        top: 30px;
+        top: 132px;
         left: 25px;
         cursor: pointer;
     }
