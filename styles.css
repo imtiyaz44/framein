@@ -37,7 +37,7 @@ body{
     color:#fff;
     text-wrap: wrap;
 }
-img{
+img.image-1,img.image-2,img.image-3,img.image-4{
     width: 120%;
     height: 100%;
     position: absolute;
@@ -160,7 +160,10 @@ img{
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: rgba(255, 255, 255, 0.8);
-    ;
+}
+nav a{
+    text-decoration: none;
+    color:#080808;
 }
 nav h1{
     font-size: 32px;
@@ -211,7 +214,7 @@ nav .fa-solid{
         height: 100vh;
         padding-top: 50px;
         z-index: 2;
-        transition: right 0.2s;
+        transition: right 0.5s;
     }
     nav ul li{
         display: block;
@@ -230,3 +233,163 @@ nav .fa-solid{
         font-size: 44px;
     }
 }
+
+/* ---------------------------about----------------------------- */
+#about{
+    padding: 80px 80px 80px 80px;
+    color:#080808;
+    margin: auto;
+}
+.about-us{
+    text-align: center;
+    margin: -180px 0 40px 0;
+    padding: 40px 0 20px 0;
+    background-color: #fff;
+    position: relative;
+    z-index: 100;
+}
+.sub-title{
+    font-size: 48px;
+    font-weight: 400;
+    padding: 0 10px 0 10px;
+    margin-bottom: 10px;
+}
+.slogan{
+    font-size: 20px;
+    padding: 0 25% 0 25%;
+}
+.services-list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.service-box{
+    flex-basis: 30%;
+    text-align: center;
+    background-color: #edeae2;
+    padding: 32px 32px 32px 32px;
+    /*border-radius: 15px;*/
+    font-weight: 300;
+    box-shadow: 4px 4px 12px rgb(224, 224, 222);
+    transition: background-color 0.2s, transform 0.2s;
+}
+.service-box h2{
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+.service-box i{
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+.service-box:hover{
+    background-color: #e5fcf5;
+    transform: translateY(-10px);
+}
+/* ------------- css for small screens --------------*/
+@media only screen and (max-width: 900px){
+    #about{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .sub-title{
+        font-size: 36px;
+    }
+    .slogan{
+        font-size: 16px;
+        padding: 0 5% 0 5%;
+    }
+    .services-list{
+        padding-left: 10%;
+        padding-right: 10%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+}
+
+/* ---------------------------portfolio----------------------------- */
+#portfolio{
+    text-align: center;
+}
+.project-list{
+    padding: 20px 20px 20px 20px;
+}
+.project{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+}
+.project:hover{
+    cursor: pointer;
+}
+.project img{
+    height: 360px;
+    object-fit: cover;
+}
+.project h2{
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 8px;
+}
+.project h3{
+    font-weight: 200;
+}
+@media only screen and (min-width: 700px) and (max-width: 899px){
+    .project-list{
+        padding: 40px 5% 40px 5%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center; 
+    }
+    .project{
+        width: 40%;
+    }
+    .project img{
+        height: 360px;
+        object-fit: cover;
+    }
+    
+}
+@media only screen and (min-width: 900px){
+    .project-list{
+        padding: 40px 10% 40px 10%;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+        grid-template-rows: repeat(6, 1fr); 
+        gap: 16px;
+        justify-content: center;
+    }
+    
+    .project:nth-child(1){
+        grid-column: 1; grid-row: 1/span 2;
+    }
+    .project:nth-child(3){
+        grid-column: 3; grid-row: 1/span 2;
+    }
+    .project:nth-child(4){
+        grid-column: 2; grid-row: 2/span 2;
+    }
+    .project:nth-child(7){
+        grid-column: 1; grid-row: 4/span 2;
+    }
+    .project:nth-child(9){
+        grid-column: 3; grid-row: 4/span 2;
+    }
+    .project:nth-child(10){
+        grid-column: 2; grid-row: 5/span 2;
+    }
+    .project{
+        padding-bottom: 0;
+    }
+    .project img{
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+
+
