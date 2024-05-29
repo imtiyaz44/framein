@@ -336,6 +336,7 @@ nav .fa-solid{
 .project h3{
     font-weight: 200;
 }
+/* ------------- css for bigger screens --------------*/
 @media only screen and (min-width: 700px) and (max-width: 899px){
     .project-list{
         padding: 40px 5% 40px 5%;
