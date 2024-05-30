@@ -148,6 +148,51 @@
             </div>
         </div>
     </div>
+    <!-- -------------------------- testimonias --------------------------- -->
+    <div id="testimonials">
+        <h1 class="sub-title">Testimonials</h1>
+        <div class="container-4">
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <ul class="carousel">
+                    <li class="card">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p>Very energetic, dedicated young architects.
+                            Enjoyed working with Samee Bhai & Sheetal Apu
+                            during making our first dream home. 
+                            Thanks & recommending highly.
+                         </p>
+                         <h2>MEHRAJ MANSUR</h2>
+                         <h3>Home Maker</h3>
+                    </li>
+                    <li class="card">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p>My dream came true with the lovely touch of 
+                            Frame In. We are privileged to have the beauty,
+                            comfort, nature all together and I feel like
+                            staying in a resort, not apartment. Lots of
+                            thanks to you guys & wish a prosperous journey
+                            in future.
+                         </p>
+                         <h2>TASNIA HOSSAIN</h2>
+                         <h3>DNA Scientist</h3>
+                    </li>
+                    <li class="card">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <p>I am highly satisfied with the overall service of 
+                            Frame In. From the design development to execution
+                            they were organized. I am happy with my home interior
+                            done by Frame In.
+                         </p>
+                         <h2>MONIRA SHEHNAJ</h2>
+                         <h3>Doctor</h3>
+                    </li>
+                </ul>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+        
+        
     <!-- --------------------------JS--------------------------- -->
     <script>
         var sidemenu = document.getElementById("sidemenu");
@@ -174,7 +219,7 @@
                 if (currentScroll > lastScroll && !body.classList.contains("scroll-down")) {
                     body.classList.remove("scroll-up")
                     body.classList.add("scroll-down")
-                    
+
             }}
             if (currentScroll < lastScroll && body.classList.contains("scroll-down")) {
                 body.classList.remove("scroll-down")
@@ -183,6 +228,69 @@
 
             lastScroll = currentScroll;
         })
+
+        const carousel = document.querySelector(".carousel");
+        const arrowBtns = document.querySelectorAll(".wrapper i");
+        const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+        const carouselChildren =  [...carousel.children]
+
+        let isDragging = false, startX, startScrollLeft;
+        // Get the number of cards that can fit in the carousel at once
+        let cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
+
+        // Insert copies of the last few cards to beginning of carousel for infinite scrolling 
+        carouselChildren.slice(-cardPerView).reverse().forEach(card => {
+            carousel.insertAdjacentHTML("afterbegin", card.outerHTML);
+        })
+        // Insert copies of the first few cards to end of carousel for infinite scrolling 
+        carouselChildren.slice(0, cardPerView).forEach(card => {
+            carousel.insertAdjacentHTML("beforeend", card.outerHTML);
+        })
+
+        arrowBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+            })
+        })
+
+        const dragStart = (e) => {
+            isDragging = true;
+            carousel.classList.add("dragging");
+            // Records the initial cursor and scroll position of the carousel
+            startX = e.pageX;
+            startScrollLeft = carousel.scrollLeft;
+        }
+
+        const dragging = (e) => {
+            if(!isDragging) return;
+            // Updates the scroll position of the carousel based on cursor movement
+            carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+        }
+
+        const dragStop = () => {
+            isDragging = false;
+            carousel.classList.remove("dragging");
+        }
+
+        const infiniteScroll = () => {
+            // If the carousel is at the beginning, scroll to the end
+            if(carousel.scrollLeft === 0) {
+                carousel.classList.add("no-transition");
+                carousel.scrollLeft = carousel.scrollWidth - (2 * carousel.offsetWidth);
+                carousel.classList.remove("no-transition");
+            }
+            else if(Math.ceil(carousel.scrollLeft) === carousel.scrollWidth - carousel.offsetWidth){
+                carousel.classList.add("no-transition");
+                carousel.scrollLeft = carousel.offsetWidth;
+                carousel.classList.remove("no-transition");
+            }
+        }
+
+        carousel.addEventListener("mousedown", dragStart);
+        carousel.addEventListener("mousemove", dragging);
+        document.addEventListener("mouseup", dragStop);
+        carousel.addEventListener("scroll", infiniteScroll);
+        
     </script>
 </body>
 </html>
