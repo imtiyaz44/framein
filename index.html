@@ -90,58 +90,80 @@
             <h1 class="sub-title">PROJECT PORTFOLIO</h1>
             <div class="project-list">
                 <div class="project" onclick='location.href="index.html";'>
-                    <img src="media/test.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/test.webp" alt="">
+                    </div>
                     <h2>AKHANKHA de LODGE</h2>
                     <h3>Apartment Interior</h3>
                 </div>
                 
                 <div class="project">
-                    <img src="media/0x1.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/0x1.webp" alt="">
+                    </div>
                     <h2>ALISHAN SPL</h2>
                     <h3>Apartment Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/test.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/test.webp" alt="">
+                    </div>
                     <h2>LAKE CITY CONCORD</h2>
                     <h3>Apartment Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/test.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/test.webp" alt="">
+                    </div>
                     <h2>CONCORD SIKANDER HERITAGE</h2>
                     <h3>Apartment Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/0x1.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/0x1.webp" alt="">
+                    </div>
                     <h2>BTI CAMELIA</h2>
                     <h3>Apartment Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/0x1.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/0x1.webp" alt="">
+                    </div>
                     <h2>DOCTOR SADAT'S DENTAL CARE</h2>
                     <h3>Office Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/test.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/test.webp" alt="">
+                    </div>                 
                     <h2>SSF OFFICE</h2>
                     <h3>Office Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/0x1.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/0x1.webp" alt="">
+                    </div>                  
                     <h2>TASNIA FABRICS</h2>
                     <h3>Showroom Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/test.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/test.webp" alt="">
+                    </div>                  
                     <h2>MASCO DESIGN STUDIO</h2>
                     <h3>Office Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/test.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/test.webp" alt="">
+                    </div>                   
                     <h2>MASCO INHOUSE SHOWROOM</h2>
                     <h3>Showroom Interior</h3>
                 </div>
                 <div class="project">
-                    <img src="media/0x1.webp" alt="">
+                    <div class="project-img">
+                        <img src="media/0x1.webp" alt="">
+                    </div>                 
                     <h2>MASCO R&D</h2>
                     <h3>Office Interior</h3>
                 </div>
@@ -191,8 +213,38 @@
                 <i id="right" class="fa-solid fa-angle-right"></i>
             </div>
         </div>
-        
-        
+    </div>
+    <!-- -------------------------- contact --------------------------- -->   
+    <div id="contact">
+        <div class="container-5">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="last-title">CONTACT US</h1>
+                    <p><i class="fa-solid fa-envelope"></i> framein.org@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> +880 1303 277 227</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/framein.org"><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn-1 btn-2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Frame IN</p>
+        </div>
+    </div>
     <!-- --------------------------JS--------------------------- -->
     <script>
         var sidemenu = document.getElementById("sidemenu");
@@ -292,5 +344,23 @@
         carousel.addEventListener("scroll", infiniteScroll);
         
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxdJt1cl_d1SPn2y02mgm92PajePd9Sc4xu9eNuQXSXJmejz2NP_0-eV_Jp8XIfBJvgLg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
