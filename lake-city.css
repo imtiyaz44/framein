@@ -148,7 +148,7 @@ a:nth-child(1) {
 }
 a:nth-child(2) {
     grid-column: 7/11;
-    grid-row: -3/4;
+    grid-row: -4/4;
 }
 a:nth-child(3) {
     grid-column: 4/7;
@@ -165,6 +165,10 @@ a:nth-child(5) {
 a:nth-child(6) {
     grid-column: 7/12;
     grid-row: 8/17;
+}
+a:nth-child(7) {
+    grid-column: 1/4;
+    grid-row: 11/16;
 }
 /* ------------- css for small screens --------------*/
 @media only screen and (max-width: 900px){
