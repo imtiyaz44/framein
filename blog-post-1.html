@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame in - A Modern-Rustic Themed Penthouse Apartment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="blog-post.css">
+    <script src="https://kit.fontawesome.com/95a43eab56.js" crossorigin="anonymous"></script>
+</head>
+<body oncontextmenu="return false;">
+    <header>
+        <nav>
+            <div class="block"></div>
+            <a href="index.html"><img src="media/logo-shadow.png" alt=""></a>
+            <div id="sidemenu" onclick="closemenu()">
+                <ul>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>  
+                </ul>
+                <div class="social-icons-mob">
+                    <a href="https://www.facebook.com/framein.org"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>   
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/framein.org"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+    </header>
+    <section class="blog-post">
+        <div class="container">
+            <div class="post-wrapper">
+                <img src="/portfolio/alishan-spl/img-1.webp" alt="">
+                <h3>June 08, 2024</h3>
+                <h1>A Modern-Rustic Themed Penthouse Apartment</h1>
+                <p>Stepping into this abode, one is enveloped by a harmonious blend of state-of-the-art facilities and the serene aura of antiquity. The homeowners desired a dwelling that exudes the charm of the old world while catering to the requirements of contemporary living.
+                </p>
+                <p>The apartment&#39;s initial design presented a well-structured canvas, requiring only subtle refinements to perfect its utility in accordance with the residents&#39; requirements.
+                </p>
+                <p>We curated a sense of historical continuity by incorporating bricks that have weathered two centuries, sourced from deconstructed buildings. These bricks were strategically placed to serve as a narrative of the home&#39;s connection to the past.
+                </p>
+                <p>To seamlessly integrate daily life&#39;s necessities, we furnished the residence with modern amenities such as walk-in closets, bespoke dressing areas, multimedia units, and custom cabinetry for both kitchen and bathrooms.
+                </p>
+                <p>The central space emerged as the most exhilarating aspect of our design. It was designed to be a versatile area, akin to the communal spirit of a village square. The introduction of a raised wooden platform transforms it into a stage for an array of activities, from musical sessions and yoga to social gatherings, reminiscent of the uninhibited play found in a rural homestead&#39;s courtyard. A playful swing was installed to further animate the space, and the deliberate absence of partitions ensures it remains a welcoming expanse for hosting a convivial assembly of friends and family.
+                </p>
+                <a href="alishan-spl.html"><p>For more images please click here.</p></a>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="blog">
+        <div class="container">
+            <h1>THE FRAME IN BLOG</h1>
+            <div class="blog-wrapper">
+                <a href="#" class="blog-link">
+                    <div class="blog-card">
+                        <img src="portfolio/alishan-spl/img-1.webp" alt="">
+                        <h3>by Author Name</h3>
+                        <h2>A Modern-Rustic Themed Penthouse Apartment</h2>
+                        <p>Stepping into this abode, one is enveloped by a harmonious blend of...</p>
+                        <p> <span>READ MORE</span> <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
+                </a>
+                <a href="#" class="blog-link">
+                    <div class="blog-card">
+                        <img src="portfolio/concord-sikander-heritage/img-1.webp" alt="">
+                        <h3>by Author Name</h3>
+                        <h2>Pure Sense of Elegance with a Colorful Symphony</h2>
+                        <p>From the outset, the clients envisioned their home as a...</p>
+                        <p> <span>READ MORE</span> <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
+                </a>
+                <a href="#" class="blog-link">
+                    <div class="blog-card">
+                        <img src="portfolio/bti-camelia/img-3.webp" alt="">
+                        <h3>by Author Name</h3>
+                        <h2>Perfect Mid-Sized Family Unit</h2>
+                        <p>A mid-sized family unit designed with all the utilities...</p>
+                        <p> <span>READ MORE</span> <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
+                </a>
+                <a href="#" class="blog-link">
+                    <div class="blog-card">
+                        <img src="portfolio/dr-sadat-chamber/img-1.webp" alt="">
+                        <h3>by Author Name</h3>
+                        <h2>A Modern Dental Practice for Optimal Functionality and Patient Comfort</h2>
+                        <p>Designing this dental care practice was a complex endeavor, as it needed...</p>
+                        <p> <span>READ MORE</span>  <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </section> -->
+    <div id="copyright">
+        <div>
+            <p>Copyright © Frame IN</p>
+        </div>
+    </div>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0"
+        }
+        function closemenu(){
+            sidemenu.style.right = "-100%"
+        }
+    </script>

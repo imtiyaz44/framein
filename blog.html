@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frame in - Lake City Concord</title>
+    <title>Frame in - Blog</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="lightbox.css">
+    <link rel="stylesheet" href="blog.css">
     <script src="https://kit.fontawesome.com/95a43eab56.js" crossorigin="anonymous"></script>
 </head>
 <body oncontextmenu="return false;">
@@ -38,42 +37,50 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
     </header>
-    <div id="project">
+    <section class="blog">
         <div class="container">
-            <div class="description">
-                <h2> <span>Apartment Interior</span>  <br> <span>at</span>  Lake City Concord</h2>
-                <p>Project Location: Khilkhet, Dhaka</p>
-                <p>Area: 1000 SFT</p>
-                <p>Completion Year: 2020</p>
-                <p>Client: Mr. Ali & Mrs. Mehnaz</p>
-            </div>
-            <div class="gallery">
-                <a href="portfolio/lake-city/img-1.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/lake-city/img-1.webp" alt="">
+            <h1>THE FRAME IN BLOG</h1>
+            <div class="blog-wrapper">
+                <a href="blog-post-1.html" class="blog-link">
+                    <div class="blog-card">
+                        <img src="portfolio/alishan-spl/img-1.webp" alt="">
+                        <h3>June 08, 2024</h3>
+                        <h2>A Modern-Rustic Themed Penthouse Apartment</h2>
+                        <p>Stepping into this abode, one is enveloped by a harmonious blend of...</p>
+                        <p> <span>READ MORE</span> <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
                 </a>
-                <a href="portfolio/lake-city/img-2.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/lake-city/img-2.webp" alt="">
+                <a href="blog-post-2.html" class="blog-link">
+                    <div class="blog-card">
+                        <img src="portfolio/concord-sikander-heritage/img-1.webp" alt="">
+                        <h3>June 08, 2024</h3>
+                        <h2>Pure Sense of Elegance with a Colorful Symphony</h2>
+                        <p>From the outset, the clients envisioned their home as a...</p>
+                        <p> <span>READ MORE</span> <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
                 </a>
-                <a href="portfolio/lake-city/img-3.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/lake-city/img-3.webp" alt="">
+                <a href="blog-post-3.html" class="blog-link">
+                    <div class="blog-card">
+                        <img src="portfolio/bti-camelia/img-3.webp" alt="">
+                        <h3>June 08, 2024</h3>
+                        <h2>Perfect Mid-Sized Family Unit</h2>
+                        <p>A mid-sized family unit designed with all the utilities...</p>
+                        <p> <span>READ MORE</span> <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
                 </a>
-                <a href="portfolio/lake-city/img-4.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/lake-city/img-4.webp" alt="">
+                <a href="blog-post-4.html" class="blog-link">
+                    <div class="blog-card">
+                        <img src="portfolio/dr-sadat-chamber/img-1.webp" alt="">
+                        <h3>June 08, 2024</h3>
+                        <h2>A Modern Dental Practice for Optimal Functionality and Patient Comfort</h2>
+                        <p>Designing this dental care practice was a complex endeavor, as it needed...</p>
+                        <p> <span>READ MORE</span>  <i class="fa-solid fa-angle-right"></i></p>
+                    </div>
                 </a>
-                <a href="portfolio/lake-city/img-5.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/lake-city/img-5.webp" alt="">
-                </a>
-                <a href="portfolio/lake-city/img-6.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/lake-city/img-6.webp" alt="">
-                </a>
-                <a href="portfolio/lake-city/img-7.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/lake-city/img-7.webp" alt="">
-                </a>
+                
             </div>
         </div>
-    </div>
-        
-    <!-- -------------------------- copyright --------------------------- -->   
+    </section>
     <div id="copyright">
         <div>
             <p>Copyright © Frame IN</p>
@@ -89,11 +96,3 @@
             sidemenu.style.right = "-100%"
         }
     </script>
-    <script src="lightbox-plus-jquery.js"></script>
-    <script>
-        lightbox.option({
-            'alwaysShowNavOnTouchDevices': true,
-            'disableScrolling': true
-        })
-    </script>
-</body>

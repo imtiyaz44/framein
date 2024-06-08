@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frame in - Inspiring Design</title>
+    <title>Frame in - Interior Lifestyle</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -38,20 +38,33 @@
                 </div>               
             </div>
             <nav>
-                <a href="index.html"><h1>FRAME IN</h1></a>
-                <ul id="sidemenu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
+                <div class="block"></div>
+                <a href="index.html"><img src="media/logo-shadow.png" alt=""></a>
+                <div id="sidemenu" onclick="closemenu()">
+                    <ul>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="blog.html">BLOG</a></li>
+                        <li><a href="#portfolio" onclick="closemenu()">PORTFOLIO</a></li>
+                        <li><a href="contact.html">CONTACT</a></li>
+                    </ul>
+                    <div class="social-icons-mob">
+                        <a href="https://www.facebook.com/framein.org"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                     </div>
+                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/framein.org"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
         </div>
     </div>
     <!-- --------------------------about--------------------------- -->
-    <div id="about">
+    <!-- <div id="about">
         <div class="container">
                 <div class="about-us">
                     <h1 class="sub-title">We Frame In Your Imagination</h1>
@@ -83,102 +96,141 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- --------------------------portfolio--------------------------- -->
     <div id="portfolio">
         <div class="container">
-            <h1 class="sub-title">PROJECT PORTFOLIO</h1>
-            <div class="project-list">
-                <div class="project" onclick='location.href="akankha-de-lodge.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-1.webp" alt="">
+            <div class="grid">
+                <div class="grid-col grid-col--1"> </div>
+                <div class="grid-col grid-col--2"> </div>
+                <div class="grid-col grid-col--3"> </div>
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="del-azura.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>DEL AZURA <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-1.webp" alt="">
+                        </div>                    
                     </div>
-                    <h2>AKHANKHA de LODGE</h2>
-                    <h3>Apartment Interior</h3>
                 </div>
-                
-                <div class="project" onclick='location.href="alishan-spl.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-2.webp" alt="">
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="rupayan-city.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>RUPAYAN CITY <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-2.webp" alt="">
+                        </div>                    
                     </div>
-                    <h2>ALISHAN SPL</h2>
-                    <h3>Apartment Interior</h3>
                 </div>
-                <div class="project" onclick='location.href="lake-city.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-3.webp" alt="">
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="south-majesty.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>SOUTH MAJESTY <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-3.webp" alt="">
+                        </div>                  
                     </div>
-                    <h2>LAKE CITY CONCORD</h2>
-                    <h3>Apartment Interior</h3>
                 </div>
-                <div class="project" onclick='location.href="concord-sikander-heritage.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-4.webp" alt="">
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="bti-camelia.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>BTI CAMELIA <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-4.webp" alt="">
+                        </div>  
                     </div>
-                    <h2>CONCORD SIKANDER HERITAGE</h2>
-                    <h3>Apartment Interior</h3>
                 </div>
-                <div class="project" onclick='location.href="bti-camelia.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-5.webp" alt="">
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="akankha-de-lodge.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>AKHANKHA de LODGE <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-5.webp" alt=""> 
+                        </div> 
                     </div>
-                    <h2>BTI CAMELIA</h2>
-                    <h3>Apartment Interior</h3>
                 </div>
-                <div class="project" onclick='location.href="dr-sadat-chamber.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-6.webp" alt="">
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="concord-sikander-heritage.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>CONCORD SIKANDER HERITAGE <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-6.webp" alt=""> 
+                        </div>  
                     </div>
-                    <h2>DOCTOR SADAT'S DENTAL CARE</h2>
-                    <h3>Office Interior</h3>
                 </div>
-                <div class="project" onclick='location.href="del-azura.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-7.webp" alt="">
-                    </div>                 
-                    <h2>DEL AZURA</h2>
-                    <h3>Apartment Interior</h3>
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="alishan-spl.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>ALISHAN SPL <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-7.webp" alt="">
+                        </div>   
+                    </div>
                 </div>
-                <div class="project" onclick='location.href="rupayan-city.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-8.webp" alt="">
-                    </div>                  
-                    <h2>RUPAYAN CITY</h2>
-                    <h3>Apartment Interior</h3>
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="dr-sadat-chamber.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>DOCTOR SADAT'S DENTAL CARE <br> <span>Office Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-8.webp" alt="">
+                        </div>   
+                    </div>
                 </div>
-                <div class="project" onclick='location.href="masco-conference-room.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-9.webp" alt="">
-                    </div>                  
-                    <h2>MASCO CONFERENCE ROOM</h2>
-                    <h3>Office Interior</h3>
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="masco-showroom.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>MASCO SHOWROOM <br> <span>Showroom Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-9.webp" alt="">
+                        </div>                    
+                    </div>
                 </div>
-                <div class="project" onclick='location.href="masco-showroom.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-10.webp" alt="">
-                    </div>                   
-                    <h2>MASCO SHOWROOM</h2>
-                    <h3>Showroom Interior</h3>
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="masco-conference-room.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>MASCO CONFERENCE ROOM <br> <span>Office Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-10.webp" alt="">
+                        </div>   
+                    </div>
                 </div>
-                <div class="project" onclick='location.href="neer.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-11.webp" alt="">
-                    </div>                 
-                    <h2>NEER</h2>
-                    <h3>Apartment Interior</h3>
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="neer.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>NEER <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-11.webp" alt="">
+                        </div>                 
+                    </div>
                 </div>
-                <div class="project" onclick='location.href="south-majesty.html";'>
-                    <div class="project-img">
-                        <img src="media/thumbnail-12.webp" alt="">
-                    </div>                 
-                    <h2>SOUTH MAJESTY</h2>
-                    <h3>Apartment Interior</h3>
+                <div class="grid-item">
+                    <div class="project" onclick='location.href="lake-city.html";'>
+                        <div class="project-img">
+                            <div class="project-text">
+                                <h2>LAKE CITY CONCORD <br> <span>Apartment Interior</span> </h2>
+                            </div>
+                            <img src="media/thumbnail-12.webp" alt=""> 
+                        </div>   
+                    </div>
                 </div>
             </div>
+            <!-- <h1 class="sub-title">PROJECT PORTFOLIO</h1> -->
+            
         </div>
     </div>
     <!-- -------------------------- testimonials --------------------------- -->
-    <div id="testimonials">
+    <!-- <div id="testimonials">
         <h1 class="sub-title">Testimonials</h1>
         <div class="container-4">
             <div class="wrapper">
@@ -220,10 +272,10 @@
                 <i id="right" class="fa-solid fa-angle-right"></i>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- -------------------------- contact --------------------------- -->   
     <div id="contact">
-        <div class="container-5">
+<!--         <div class="container-5">
             <div class="row">
                 <div class="contact-left">
                     <h1 class="last-title">CONTACT US</h1>
@@ -247,7 +299,7 @@
                     <span id="msg"></span>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="copyright">
             <p>Copyright © Frame IN</p>
         </div>
@@ -260,10 +312,10 @@
             sidemenu.style.right = "0"
         }
         function closemenu(){
-            sidemenu.style.right = "-200px"
+            sidemenu.style.right = "-100%"
         }
-
-        const body = document.body;
+/* ------------------- JS for scrolling animation------------------- */
+        /* const body = document.body;
         let lastScroll = 0;
 
         window.addEventListener('scroll', () => {
@@ -287,8 +339,8 @@
 
             lastScroll = currentScroll;
         })
-
-        const carousel = document.querySelector(".carousel");
+/* ------------------- JS for scrolling animation------------------- */
+      /*  const carousel = document.querySelector(".carousel");
         const arrowBtns = document.querySelectorAll(".wrapper i");
         const firstCardWidth = carousel.querySelector(".card").offsetWidth;
         const carouselChildren =  [...carousel.children]
@@ -348,7 +400,7 @@
         carousel.addEventListener("mousedown", dragStart);
         carousel.addEventListener("mousemove", dragging);
         document.addEventListener("mouseup", dragStop);
-        carousel.addEventListener("scroll", infiniteScroll);
+        carousel.addEventListener("scroll", infiniteScroll); */
         
     </script>
     <script>
@@ -368,6 +420,13 @@
             })
             .catch(error => console.error('Error!', error.message))
         })
+      </script>
+      <script src="https://unpkg.com/colcade@0/colcade.js"></script>
+      <script>
+        var colc = new Colcade( '.grid', {
+            columns: '.grid-col',
+            items: '.grid-item'
+        });
       </script>
 </body>
 </html>

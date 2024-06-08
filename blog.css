@@ -1,0 +1,248 @@
+html{
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    /* disable touch long press */
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+body{
+    background: #fff;
+    color: #080808;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+}
+nav{
+    color: #080808;
+    padding: 20px 10%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items:baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+    z-index: 10000;
+}
+nav .block{
+    display: none;
+}
+nav a{
+    text-decoration: none;
+    color:#080808;
+}
+nav a img{
+    position: relative;
+    width: 160px;
+}
+nav ul{
+    margin-left: -40px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #080808;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #080808;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+#sidemenu{
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+}
+#sidemenu .social-icons-mob{
+    display: none;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 16px;
+    color:#080808;
+    display: inline-block;
+}
+.social-icons a:hover{
+    color: #0d62da;
+}
+/* ------------- css for small screens --------------*/
+nav .fa-solid{
+    display: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1200px){
+    nav .block{
+        display: block;
+        width: 12px;
+    }
+    nav i.fa-bars{
+        display: block;
+        font-size: 36px;
+    }
+    #sidemenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(255, 255, 255);
+        margin: auto;
+        position: fixed;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        /* align-items:center; */
+        padding-top: 120px;
+        text-align: center;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    #sidemenu ul{
+        width: 100%;
+    }
+    #sidemenu ul li{
+        display: block;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    .social-icons{
+        display: none;
+    }
+    #sidemenu .social-icons-mob{
+        display: block;
+        width: 100%;
+    }
+    #sidemenu .social-icons-mob a{
+        margin: auto;
+        padding: 0 12px;
+        font-size: 20px;
+    }
+    #sidemenu .fa-xmark{
+        display:block;
+        height: 50px;
+        width: 50px; 
+        line-height: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 60px; 
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+        cursor: pointer;
+    }
+}
+
+
+.blog{
+    position: relative;
+    padding: 156px 15% 24px 15%;
+    width: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.container h1{
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+}
+.blog-wrapper{
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.blog-wrapper .blog-link{
+    text-decoration: none;
+    color:#080808;
+    flex-basis: 30%;
+    padding: 10px 10px;
+}
+.blog-card{
+    padding-top: 20px;
+}
+.blog-card h3{
+    font-size: 14px;
+    font-weight: 200;
+    padding-top: 8px;
+}
+.blog-card h2{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 8px;
+}
+.blog-card p{
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 18px;;
+    padding-top: 12px;
+}
+.blog-card p span{
+    font-weight: 400;
+}
+.blog-card p i{
+    padding-left: 4px;
+}
+.blog-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    overflow: hidden;
+}
+/* ------------- css for small screens --------------*/
+@media only screen and (max-width: 1200px){
+    .blog-wrapper .blog-link{
+        flex-basis: 50%;
+        padding: 10px 10px;
+    }
+}
+@media only screen and (max-width: 700px){
+    .blog{
+        padding: 156px 4% 24px 4%;
+    }
+    .container h1{
+        font-size: 36px;
+        padding: 0 8%;
+    }
+    .blog-wrapper .blog-link{
+        flex-basis: 100%;
+    }
+}
+
+#copyright{
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 60px;
+    padding-bottom: 12px;
+    font-weight: 300;
+    text-align: center;
+}

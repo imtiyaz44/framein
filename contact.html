@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frame in - MASCO Conference Room</title>
+    <title>Frame in - Get In Touch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="portfolio.css">
-    <link rel="stylesheet" href="lightbox.css">
+    <link rel="stylesheet" href="contact.css">
     <script src="https://kit.fontawesome.com/95a43eab56.js" crossorigin="anonymous"></script>
 </head>
 <body oncontextmenu="return false;">
@@ -38,40 +37,35 @@
             <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
     </header>
-    <div id="project">
-        <div class="container">
-            <div class="description">
-                <h2> <span>Office Interior</span>  <br> <span>at</span>  MASCO Conference Room</h2>
-                <p>Location: Gazipura, Dhaka</p>
-                <p>Area: 500 SFT</p>
-                <p>Client: MASCO Group</p>  
-            </div>
-            <div class="gallery">
-                <a href="portfolio/masco-conference-room/img-1.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/masco-conference-room/img-1.webp" alt="">
-                </a>
-                <a href="portfolio/masco-conference-room/img-2.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/masco-conference-room/img-2.webp" alt="">
-                </a>
-                <a href="portfolio/masco-conference-room/img-3.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/masco-conference-room/img-3.webp" alt="">
-                </a>
-                <a href="portfolio/masco-conference-room/img-4.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/masco-conference-room/img-4.webp" alt="">
-                </a>
-                <a href="portfolio/masco-conference-room/img-5.webp" data-lightbox="project-image" data-title="">
-                    <img src="portfolio/masco-conference-room/img-5.webp" alt="">
-                </a>
-            </div>
-        </div>
+
+    <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="last-title">Get In Touch</h1>
+                            <p><i class="fa-solid fa-envelope"></i> framein.org@gmail.com</p>
+                            <p><i class="fa-solid fa-phone"></i> +880 1303 277 227</p>
+                        </div>
+                        
+                        <div class="contact-right">
+                            <form name="submit-to-google-sheet">
+                                <input type="text" name="Name" placeholder="Your Name" required>
+                                <input type="email" name="Email" placeholder="Your Email" required>
+                                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                                <button type="submit" class="btn-1 btn-2">Submit</button>
+                            </form>
+                            <span id="msg"></span>
+                        </div>
+                    </div>
+                </div>
     </div>
-        
-    <!-- -------------------------- copyright --------------------------- -->   
     <div id="copyright">
         <div>
             <p>Copyright © Frame IN</p>
         </div>
     </div>
+
+
     <script>
         var sidemenu = document.getElementById("sidemenu");
 
@@ -81,12 +75,21 @@
         function closemenu(){
             sidemenu.style.right = "-100%"
         }
-    </script>
-    <script src="lightbox-plus-jquery.js"></script>
-    <script>
-        lightbox.option({
-            'alwaysShowNavOnTouchDevices': true,
-            'disableScrolling': true
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxdJt1cl_d1SPn2y02mgm92PajePd9Sc4xu9eNuQXSXJmejz2NP_0-eV_Jp8XIfBJvgLg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message Sent Successfully!"
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                }, 5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
         })
     </script>
-</body>

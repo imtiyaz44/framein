@@ -1,0 +1,243 @@
+html{
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+    /* disable touch long press */
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+body{
+    background: #fff;
+    color: #080808;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    width: 100%;
+}
+nav{
+    color: #080808;
+    padding: 20px 10%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #fff;
+    z-index: 10000;
+}
+nav .block{
+    display: none;
+}
+nav a{
+    text-decoration: none;
+    color:#080808;
+}
+nav a img{
+    position: relative;
+    width: 160px;
+}
+nav ul{
+    margin-left: -40px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: #080808;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #080808;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+#sidemenu{
+    display: flex;
+    justify-content:space-between;
+    align-items: baseline;
+}
+#sidemenu .social-icons-mob{
+    display: none;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 16px;
+    color:#080808;
+    display: inline-block;
+}
+.social-icons a:hover{
+    color: #0d62da;
+}
+/* ------------- css for small screens --------------*/
+nav .fa-solid{
+    display: none;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1200px){
+    nav .block{
+        display: block;
+        width: 12px;
+    }
+    nav i.fa-bars{
+        display: block;
+        font-size: 36px;
+    }
+    #sidemenu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgb(255, 255, 255);
+        margin: auto;
+        position: fixed;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        /* align-items:center; */
+        padding-top: 120px;
+        text-align: center;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    #sidemenu ul{
+        width: 100%;
+    }
+    #sidemenu ul li{
+        display: block;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+    .social-icons{
+        display: none;
+    }
+    #sidemenu .social-icons-mob{
+        display: block;
+        width: 100%;
+    }
+    #sidemenu .social-icons-mob a{
+        margin: auto;
+        padding: 0 12px;
+        font-size: 20px;
+    }
+    #sidemenu .fa-xmark{
+        display:block;
+        height: 50px;
+        width: 50px; 
+        line-height: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 60px; 
+        border-radius: 50%;
+        position: relative;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+        cursor: pointer;
+    }
+}
+/* --------------------------- project ----------------------------- */
+#project{
+    position: relative;
+    padding-top: 108px;
+    width: 100%;
+}
+.container{
+    padding: 16px 15%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.description{
+    text-align: center;
+    padding-bottom: 32px;
+    padding-top: 24px;
+    flex-basis: 100;
+    height: 100%;
+    top: 100px;
+}
+.description h2{
+    font-size: 56px;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+.description h2 span{
+    font-weight: 100;
+}
+.description p{
+    font-size: 20px;
+    font-weight: 200;
+}
+.gallery{
+    flex-basis: 100%;
+    columns: 3;
+    gap: 16px;
+}
+.gallery a img{
+    object-fit: cover;
+    width: 100%;
+    margin-bottom: 16px;
+}
+/* ------------- css for small screens --------------*/
+@media only screen and (max-width: 700px){
+    #project{
+        padding-top: 96px;
+    }
+    .container{
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px 1%;
+    }
+    .description{
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .description h2{
+        font-size: 36px;
+        padding-bottom: 8px;
+    }
+    .description h2 span{
+        font-size: 28px;
+    }
+    .description p{
+        font-size: 16px;
+    }
+    .gallery{
+        flex-basis: 100%;
+        gap: 0.2em;
+        columns: 2;
+    }
+    .gallery a img{
+        margin-bottom: 0;
+    }
+}
+/* --------------------------- copyright ----------------------------- */
+#copyright{
+    position: relative;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 60px;
+    padding-bottom: 12px;
+    font-weight: 300;
+    text-align: center;
+}
