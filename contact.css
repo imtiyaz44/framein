@@ -163,7 +163,7 @@ nav .fa-solid{
 #contact{
     position: relative;
     padding: 124px 10% 24px 10%;
-    width: 100%;
+    max-width: 1368px;
     height: 100%;
 }
 .container{
