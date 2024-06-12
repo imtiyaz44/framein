@@ -15,7 +15,6 @@ html{
     user-select:none;
 }
 body{
-    scrollbar-gutter: stable both-edges;
     background: #fff;
     color: #080808;
     min-height: 100%;
@@ -26,6 +25,8 @@ header{
     width: 100%;
 }
 nav{
+    scrollbar-gutter: stable;
+    overflow: auto;
     color: #080808;
     padding: 20px 10%;
     width: 100%;
