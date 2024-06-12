@@ -124,6 +124,7 @@ img.image-1,img.image-2,img.image-3,img.image-4{
     animation-delay: 12s;
 }
 .container nav{
+    scrollbar-gutter: stable both-edges;
     color: #080808;
     padding: 20px 10%;
     width: 100%;
