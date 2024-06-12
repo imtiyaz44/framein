@@ -25,6 +25,7 @@ header{
     width: 100%;
 }
 nav{
+    scrollbar-gutter: stable both-edges;
     color: #080808;
     padding: 20px 10%;
     width: 100%;
