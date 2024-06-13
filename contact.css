@@ -178,21 +178,32 @@ nav .fa-solid{
     justify-content: center;
     gap: 100px;
 }
-.contact-left{
+/* .contact-left{
+    flex-basis: 50%;
     padding-top: 16px;
-}
+    
+} */
+/* .contact-right{
+    flex-basis: 50%;
+} */
 .last-title{
     font-size: 40px;
     font-weight: 600;
 }
-.contact-left p{
+.contact-left a{
+    text-decoration: none;
+    color:#080808;
     margin-top: 28px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
 }
-.contact-left p i{
-    margin-right: 16px;
-    font-size: 24px
+.contact-left a p{
+    font-size: 16px;
 }
-
+.contact-left a i{
+    font-size: 22px;
+}
 .btn-1{
     display: inline-block;
     margin: 52px auto;
@@ -200,13 +211,15 @@ nav .fa-solid{
     background-color: #eecc6c;
     border: 1px solid #edeae2;
     padding: 12px 52px;
-    border-radius: 6px;
+    border-radius: 3px;
     text-decoration: none;
     color:#080808;
     font-size: 18px;
 }
 .contact-right form{
+    /* width: 100%; */
     max-width: 600px;
+    margin-top: 20px;
 }
 form input, form textarea{
     width: 100%;
@@ -217,7 +230,7 @@ form input, form textarea{
     margin: 16px 0;
     color:#080808;
     font-size: 18px;
-    border-radius: 6px;
+    border-radius: 3px;
 }
 form .btn-2{
     padding: 16px 60px;
